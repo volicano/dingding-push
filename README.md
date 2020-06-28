@@ -23,7 +23,7 @@ composer require volicano/dingding-push
 或加入
 
 ```
-"volicano/dingding-push":"dev-master"
+"volicano/dingding-push": "dev-master"
 ```
 
 到你的`composer.json`文件中的require段。
