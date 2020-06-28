@@ -22,16 +22,14 @@ class DingDing
      *
      * @return void
      */
-    public function __construct($access_token = null)
+    public function __construct($access_token = null,$secret=null)
     {
         if (is_null($access_token)) {
             $access_token = env('DINGDING_TOKEN', '');
             $secret = env('DINGDING_SECRET', '');
         }
         $this->token = $access_token;
-        if($secret){
-            $this->secret = $secret;
-        }
+        $this->secret = $secret;
     }
 
     /**
