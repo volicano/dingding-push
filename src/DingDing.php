@@ -101,16 +101,29 @@ class DingDing
     private function textData($text,$someone='',$isAtAll=false)
     {
         if($someone||$isAtAll){
-            return [
-                'msgtype'=>"text",
-                "text"=>[
-                    "content"=>$text." "."@".$someone,
-                ],
-                "at"=>[
-                    "atMobiles"=>[$someone],
-                    "isAtAll"=>$isAtAll
-                ],
-            ];
+            if($someone){
+                return [
+                    'msgtype'=>"text",
+                    "text"=>[
+                        "content"=>$text,
+                    ],
+                    "at"=>[
+                        "atMobiles"=>[$someone],
+                        "isAtAll"=>$isAtAll
+                    ],
+                ];
+            }else{
+                return [
+                    'msgtype'=>"text",
+                    "text"=>[
+                        "content"=>$text." "."@".$someone,
+                    ],
+                    "at"=>[
+                        "atMobiles"=>[$someone],
+                        "isAtAll"=>$isAtAll
+                    ],
+                ];
+            }
         }else{
             return [
                 'msgtype'=>"text",
