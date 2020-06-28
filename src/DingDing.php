@@ -105,7 +105,7 @@ class DingDing
                 return [
                     'msgtype'=>"text",
                     "text"=>[
-                        "content"=>$text,
+                        "content"=>$text." "."@".$someone,
                     ],
                     "at"=>[
                         "atMobiles"=>[$someone],
@@ -116,7 +116,7 @@ class DingDing
                 return [
                     'msgtype'=>"text",
                     "text"=>[
-                        "content"=>$text." "."@".$someone,
+                        "content"=>$text,
                     ],
                     "at"=>[
                         "atMobiles"=>[$someone],
