@@ -5,6 +5,10 @@
     "require": {
         "php": "^7.0"
     },
+    "keywords": [
+        "dingding",
+        "dingtalk"
+    ],
     "license": "MIT",
     "minimum-stability": "dev",
     "autoload": {
